@@ -13,7 +13,7 @@ License:
 Open terminal on linux/osx or git bash on windows.
 
 ```shell
-sleep_assay.py ~/sleep_assay/config/example_config.yaml
+sleep_assay ~/sleep_assay/config/example_config.yaml
 ```
 
 Press ctrl-c in terminal window or close terminal window to stop.

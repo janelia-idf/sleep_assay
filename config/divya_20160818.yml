@@ -8,7 +8,7 @@ relays:
   red_light: 7
   board_indicator_light: 0
 start:
-  offset_days: -1 # -1 <= offset_days <= 10, -1 is start immediately, 0 is today, 1 is tomorrow, etc.
+  offset_days: 0 # -1 <= offset_days <= 10, -1 is start immediately, 0 is today, 1 is tomorrow, etc.
   hour: 9 # 0 <= hour < 24, 9 is 9AM, 16 is 4PM, etc.
   minute: 0 # 0 <= minute < 60, hour = 9 and minute = 0 is 9:00AM, hour = 16 and minute = 30 is 4:30PM, etc.
 camera_trigger:
@@ -18,16 +18,16 @@ entrainment:
     power: 14 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
     pwm0_on_duration_hours: 12
     pwm0_off_duration_hours: 12
-  duration_days: 2
+  duration_days: 1
 experiment:
 - white_light:
     power: 14 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
     pwm0_on_duration_hours: 12
     pwm0_off_duration_hours: 12
   red_light:
-    power: 14 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
+    power: 100 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
     pwm0_frequency_hz: 10
-    pwm0_duty_cycle_percent: 1
+    pwm0_duty_cycle_percent: 20
     pwm1_on_duration_hours: 12
     pwm1_off_duration_hours: 12
     delay_days: 0.5   # Chrimson activation ZT12 - ZT24 (entire night)
@@ -36,15 +36,15 @@ experiment:
     power: 14 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
     pwm0_on_duration_hours: 12
     pwm0_off_duration_hours: 12
-  duration_days: 2
+  duration_days: 1
 - white_light:
     power: 14 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
     pwm0_on_duration_hours: 12
     pwm0_off_duration_hours: 12
   red_light:
-    power: 14 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
+    power: 100 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
     pwm0_frequency_hz: 10
-    pwm0_duty_cycle_percent: 1
+    pwm0_duty_cycle_percent: 20
     pwm1_on_duration_hours: 12
     pwm1_off_duration_hours: 12
   delay_days: 0   # Chrimson activation ZT0 - ZT12 (entire day)
@@ -54,4 +54,4 @@ recovery:
     power: 14 # 0 <= power <= 255, 0 is totally dark, 255 is maximum brightness
     pwm0_on_duration_hours: 12
     pwm0_off_duration_hours: 12
-  duration_days: 2
+  duration_days: 0
